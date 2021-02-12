@@ -1,13 +1,66 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.create-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.form-img {
+	min-height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: gray;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	background-color: rgb(100, 100, 100);
+	border: 1px solid rgba(0, 0, 0, 0.342);
+}
+
+.form-img img {
+	max-height: 300px;
+}
+
+.tasks {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 2rem;
+	margin: 1rem;
+}
+
+.submissions-img {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #00000018;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #212529;
+	box-shadow: 0 -100vh 0 100vh #212529;
+}
+
+@media only screen and (max-width: 1000px) {
+	.create-form {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.submissions-img {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
 }
